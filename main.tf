@@ -1,4 +1,4 @@
-resource "random_id" "xc-mcn-swiss-1-id" {
+resource "random_id" "xc-mcn-random-id" {
   byte_length = 2
 }
 
@@ -17,7 +17,7 @@ resource "random_string" "password" {
 # azure resource definitions
 
 resource "azurerm_resource_group" "azure_rg" {
-  name     = "${var.prefix}-rg-${random_id.xc-mcn-swiss-1-id.hex}"
+  name     = "${var.prefix}-rg-${random_id.xc-mcn-random-id.hex}"
   location = "${var.azure-location}"
 }
 
