@@ -12,7 +12,9 @@ variable "prefix" {
 
 variable "azure-location" {
   description = "azure location to run the deployment"
-  default = "switzerlandnorth"
+  #default = "westus"
+  default = "westeurope"
+  #default = "switzerlandnorth"
 }
 
 # azure docker node instance type
