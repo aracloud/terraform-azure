@@ -1,3 +1,4 @@
+# make sure create unambiguous object definition for xc smsv2 site
 resource "random_id" "xc-mcn-random-id" {
   byte_length = 2
 }
