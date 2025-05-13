@@ -130,7 +130,7 @@ resource "azurerm_linux_virtual_machine" "azure_dkr" {
 
   admin_ssh_key {
     username   = var.docker-node-user
-    public_key = file("${var.docker-poub-key}")
+    public_key = file("${var.docker-pub-key}")
   }
 
   os_disk {
