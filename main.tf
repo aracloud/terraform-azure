@@ -11,6 +11,11 @@ resource "random_id" "xc-mcn-random-id" {
 resource "azurerm_resource_group" "azure_rg" {
   name     = "${var.prefix}-rg-${random_id.xc-mcn-random-id.hex}"
   location = "${var.azure-location}"
+  tags = {
+    source = var.tag_source
+    owner  = var.tag_owner
+  }
+
 }
 
 resource "azurerm_virtual_network" "azure_vn" {
