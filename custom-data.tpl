@@ -16,6 +16,7 @@ sudo apt update
 
 # install docker
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sleep 3
 sudo /usr/sbin/usermod -aG docker $USER
 #sudo docker run -dit -p 8080:80 --name dvwa aracloud/docker-dvwa
 sudo docker run -dit -p 8080:80 --name dvwa kaakaww/dvwa-docker:latest
@@ -23,6 +24,9 @@ sudo docker run -dit -p 8080:80 --name dvwa kaakaww/dvwa-docker:latest
 # set locales
 sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen
 sudo /usr/sbin/locale-gen
+
+# configure ls
+sed -i s/"#alias l"/"alias l"/g /home/$USER/.bashrc
 
 # Export env vars
 #echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc
