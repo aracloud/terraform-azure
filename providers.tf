@@ -14,10 +14,6 @@ terraform {
       source  = "hashicorp/random"
       version = "~>3.0"
     }
-    volterra = {
-      source = "volterraedge/volterra"
-      version = ">=0.0.6"
-    }
   }
 }
 
