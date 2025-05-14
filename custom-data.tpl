@@ -28,6 +28,9 @@ sudo /usr/sbin/locale-gen
 # configure ls
 sed -i s/"#alias l"/"alias l"/g /home/$USER/.bashrc
 
+# debug
+echo $USER >/tmp/user.txt
+
 # Export env vars
 #echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc
 #echo "export LANG=en_US.UTF-8" >> ~/.bashrc
