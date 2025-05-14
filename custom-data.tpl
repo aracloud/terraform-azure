@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install ca-certificates curl screen apt-transport-https locales cron zsh git
+sudo apt install ca-certificates curl screen apt-transport-https locales cron zsh neofetch git
 
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
