@@ -16,7 +16,7 @@ sudo apt update
 
 # install docker
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-sudo usermod -aG docker $USER
+sudo /usr/sbin/usermod -aG docker $USER
 #sudo docker run -dit -p 8080:80 --name dvwa aracloud/docker-dvwa
 sudo docker run -dit -p 8080:80 --name dvwa kaakaww/dvwa-docker:latest
 
