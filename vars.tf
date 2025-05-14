@@ -17,7 +17,7 @@ variable "azure-location" {
   #default = "switzerlandnorth"
 }
 
-# tag: source git for azure resource group 
+# tag: source "git" and "host" for azure resource group 
 variable "tag_source" {
   default = "terraform-azure-docker-host debian03"
 }
