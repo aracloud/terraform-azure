@@ -70,18 +70,6 @@ resource "azurerm_network_security_group" "azure_nsg" {
   }
 
   security_rule {
-    name                       = "Allow-65500"
-    priority                   = 1100
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = 65500
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
-  }
-
-  security_rule {
     name                       = "Allow-80"
     priority                   = 1101
     direction                  = "Inbound"
