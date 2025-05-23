@@ -4,7 +4,7 @@
 
 variable "prefix" {
   description = "prefix for created objects"
-  default = "ara-swiss"
+  type = string
 }
 
 ####################################
@@ -12,43 +12,41 @@ variable "prefix" {
 
 variable "azure-location" {
   description = "azure location to run the deployment"
-  #default = "westus"
-  default = "westeurope"
-  #default = "switzerlandnorth"
+  type = string
 }
 
 # tag: source "git" and "host" for azure resource group 
 variable "tag_source" {
-  default = "terraform-azure-docker-host debian03"
+  type = string
 }
 
 # tag: owner azure resource group
 variable "tag_owner" {
-  default = "ara@f5.com"
+  type = string
 }
 
 # azure docker node instance type
 variable "docker-instance-type" {
   description = "instance type"
-  default = "Standard_F2"
+  type = string
 }
 
 # azure docker node disk type
 variable "docker-storage-account-type" {
   description = "storage account type"
-  default = "Standard_LRS"
+  type = string
 }
 
 # azure docker node user
 variable "docker-node-user" {
   description = "docker user"
-  default = "adminuser"
+  type = string
 }
 
 # azure ssh public key
 variable "docker-pub-key" {
   description = "public key on terraform machine"
-  default = "~/.ssh/id_rsa.pub"
+  type = string
 }
 
 # azure docker node image reference
@@ -60,10 +58,4 @@ variable "src_img_ref_docker" {
     sku       = string
     version   = string
   })
-  default = {
-    publisher = "debian"
-    offer     = "debian-12"
-    sku       = "12"
-    version   = "latest"    
-  }
 }
