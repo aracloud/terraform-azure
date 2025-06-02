@@ -4,8 +4,9 @@ azure-location = "westus"
 # azure-location = "westeurope"
 # azure-location = "switzerlandnorth"
 
-tag_source = "terraform-azure-docker-host apupi"
+tag_source_git = "terraform-azure-docker-host"
 tag_owner = "ara@f5.com"
+tag_source_host = "apupi"
 
 docker-instance-type = "Standard_F2"
 docker-storage-account-type = "Standard_LRS"
