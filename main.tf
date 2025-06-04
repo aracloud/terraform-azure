@@ -71,18 +71,6 @@ resource "azurerm_network_security_group" "azure_nsg" {
   }
 
   security_rule {
-    name                       = "Allow-80"
-    priority                   = 1101
-    direction                  = "Inbound"
-    access                     = "Deny"
-    protocol                   = "Tcp"
-    source_port_range          = "*" 
-    destination_port_range     = 80
-    source_address_prefix      = "*" 
-    destination_address_prefix = "*" 
-  }
-
-  security_rule {
     name                       = "Allow-ICMP"
     priority                   = 1200
     direction                  = "Inbound"
