@@ -58,7 +58,7 @@ Here are some key variables to configure:
   docker-pub-key = "your-machines-ssh-public-key"
   ```
 
-### 3. Dploy with Terraform
+### 3. Deploy with Terraform
 
 ```bash
 terraform init
